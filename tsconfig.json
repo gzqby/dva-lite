@@ -1,13 +1,15 @@
 {
   "compilerOptions": {
-      "outDir": "./dist/",
-      "noImplicitAny": false,
-      "target": "es6",
-      "jsx": "react",
-      "moduleResolution": "Node",
-      "allowSyntheticDefaultImports": true,
-      "module": "esnext",
-      "resolveJsonModule": true
+    "outDir": "./dist/",
+    "noImplicitAny": false,
+    "target": "es6",
+    "jsx": "react",
+    "moduleResolution": "Node",
+    "allowSyntheticDefaultImports": true,
+    "module": "esnext",
+    "resolveJsonModule": true,
+    "declaration": true,
+    "declarationDir": "./types",
   },
   "include": [
       "./src/**/*"

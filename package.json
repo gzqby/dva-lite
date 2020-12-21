@@ -2,10 +2,16 @@
   "name": "dva-lite",
   "version": "0.1.0",
   "description": "dva-lite is a lite dva that write effects with async function",
-  "main": "index.js",
+  "main": "libs/cjs/dva-lite.js",
+  "module": "libs/es/dva-lite.js",
+  "unpkg": "libs/umd/dva-lite.js",
+  "files": [
+    "libs",
+    "types"
+  ],
   "scripts": {
-    "test": "test",
-    "build": "rollup "
+    "test": "jest ./tests",
+    "build": "rollup -c ./rollup.config.js"
   },
   "repository": {
     "type": "git",
@@ -36,7 +42,14 @@
     "redux": "^4.0.5"
   },
   "devDependencies": {
-    "rollup": "^2.33.2",
-    "typescript": "^4.0.5"
+    "@rollup/plugin-typescript": "^8.1.0",
+    "jest": "^26.6.3",
+    "rollup": "^2.35.1",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-replace": "^2.2.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.29.0",
+    "tslib": "^2.0.3",
+    "typescript": "^4.1.3"
   }
 }

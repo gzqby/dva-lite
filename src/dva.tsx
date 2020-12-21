@@ -2,7 +2,7 @@ import React, { Reducer } from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import { createStore,applyMiddleware, combineReducers, ReducersMapObject, Middleware } from 'redux';
-import { createHashHistory, LocationState } from "history";
+import { createHashHistory } from "history";
 
 import {dvaMiddleware} from './middleware/middleware';
 
@@ -83,7 +83,7 @@ class Dva {
   private hookLoading: TypeModel;
 
   constructor(props: TypeDvaConstructorProps | {} = {}) {
-    const { history = createHashHistory<LocationState>(), initialState } = props as TypeDvaConstructorProps;
+    const { history = createHashHistory(), initialState } = props as TypeDvaConstructorProps;
     this.history = history;
     this.initialState = initialState;
     this.dvaModels = new Models();
